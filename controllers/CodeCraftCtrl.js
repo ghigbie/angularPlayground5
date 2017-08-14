@@ -2,13 +2,12 @@
 
 (function(){
     
-    var CodeCraftCntrl = function($scope){
+    var CodeCraftCtrl = function($scope){
         
     };
     
-    CodeCraftCntrl.inject('$scope');
+    CodeCraftCtrl.inject('$scope');
     
     angular.module('codecraft')
-        .controller('CodeCraftCntrl', CodeCraftCntrl);
-        
+        .controller('CodeCraftCtrl', CodeCraftCtrl);
 }());
