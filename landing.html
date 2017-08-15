@@ -23,10 +23,10 @@
                 <th>Birthdate</th>
                
                 <tr ng-repeat="person in persons">
-                    <tr>{{ $index }}</tr>
-                    <tr>{{ person.name }}</tr>
-                    <tr>{{ person.email }}</tr>
-                    <tr>{{ person.birthdate | date: MM-dd-yyyy }}</tr>
+                    <td>{{ $index }}</td>
+                    <td>{{ person.name }}</td>
+                    <td>{{ person.email }}</td>
+                    <td>{{ person.birthdate | date: MM-dd-yyyy }}</td>
                 </tr>
             </table>
         </div>
