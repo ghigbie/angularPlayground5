@@ -3,10 +3,11 @@
 (function(){
     
     var CodeCraftCtrl = function($scope){
-    	
+    	$scope.selectedPerson = null;
     	$scope.selectedIndex = null;
     	
-    	$scope.selectPerson = function(index){
+    	$scope.selectPerson = function(person, index){
+    		$scope.selectedPerson = person;
     		$scope.selectedIndex = index;
     	};
     	

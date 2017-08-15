@@ -16,23 +16,54 @@
         </nav>
         
         <div class="container main-content" ng-controller="CodeCraftCtrl">
-            <table class="table table-bordered">
-                <th>#</th>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Birthdate</th>
-               
-                <tr ng-repeat="person in persons" ng-cloak 
-                    ng-style="{ 
-                        'background-color' : $index == selectedIndex ? '#c9ddfc' : ''
-                    }"
-                    ng-click="selectPerson($index)">
-                    <td>{{ $index +1 }}</td>
-                    <td>{{ person.name }}</td>
-                    <td>{{ person.email }}</td>
-                    <td>{{ person.birthdate | date:"longDate" }}</td>
-                </tr>
-            </table>
+            <div class="row">
+                <div class="col-md-8">
+                    <div>
+                        <table class="table table-bordered">
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Birthdate</th>
+                   
+                            <tr ng-repeat="person in persons" ng-cloak 
+                                ng-style="{ 
+                                    'background-color' : $index == selectedIndex ? '#c9ddfc' : ''
+                                }"
+                                ng-click="selectPerson(person, $index)">
+                                <td>{{ $index +1 }}</td>
+                                <td>{{ person.name }}</td>
+                                <td>{{ person.email }}</td>
+                                <td>{{ person.birthdate | date:"longDate" }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">Details</div>
+                        <div class="panel-body">
+                            <dl>
+                                <dt>Name</dt>
+                                <dd ng-cloak>{{ selectedPerson.name }} </dd>
+                                <dt>Email</dt>
+                                <dd ng-cloak>{{ selectedPerson.email }} </dd>
+                                <dt>Birthday</dt>
+                                <dd ng-cloak>{{ selectedPerson.birthdate }} </dd>
+                                <dt>Phone Number</dt>
+                                <dd ng-cloak>{{ selectedPerson.phonenumber}} </dd>
+                                <dt>Address</dt>
+                                <dd ng-cloak>{{ selectedPerson.address }} </dd>
+                                <dt>City</dt>
+                                <dd ng-cloak>{{ selectedPerson.city}} </dd>
+                                <dt>Country</dt>
+                                <dd ng-cloak>{{ selectedPerson.country }} </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
         
         <script src="./node_modules/angular/angular.min.js"></script>
