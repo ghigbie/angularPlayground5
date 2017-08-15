@@ -49,7 +49,7 @@
                                 <dt>Email</dt>
                                 <dd ng-cloak>{{ selectedPerson.email }} </dd>
                                 <dt>Birthday</dt>
-                                <dd ng-cloak>{{ selectedPerson.birthdate }} </dd>
+                                <dd ng-cloak>{{ selectedPerson.birthdate | date:"longDate" }} </dd>
                                 <dt>Phone Number</dt>
                                 <dd ng-cloak>{{ selectedPerson.phonenumber}} </dd>
                                 <dt>Address</dt>
