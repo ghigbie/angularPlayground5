@@ -16,7 +16,19 @@
         </nav>
         
         <div class="container main-content" ng-controller="CodeCraftCtrl">
-            
+            <table class="table table-bordered">
+                <th>#</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Birthdate</th>
+               
+                <tr ng-repeat="person in persons">
+                    <tr>{{ $index }}</tr>
+                    <tr>{{ person.name }}</tr>
+                    <tr>{{ person.email }}</tr>
+                    <tr>{{ person.birthdate | date: MM-dd-yyyy }}</tr>
+                </tr>
+            </table>
         </div>
         
         <script src="./node_modules/angular/angular.min.js"></script>
