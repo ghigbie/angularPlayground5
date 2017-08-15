@@ -907,7 +907,7 @@
 	];
     };
     
-    CodeCraftCtrl.inject('$scope');
+    CodeCraftCtrl.inject = ['$scope'];
     
     angular.module('codecraft')
         .controller('CodeCraftCtrl', CodeCraftCtrl);
