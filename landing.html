@@ -10,7 +10,7 @@
         <nav class="navbar navbar-inverse">
             <div class="container">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/">List of Things - Angular Playground</a>
+                    <a class="navbar-brand" href="/">List of People - Angular Playground</a>
                 </div>
             </div>
         </nav>
@@ -22,7 +22,11 @@
                 <th>Email</th>
                 <th>Birthdate</th>
                
-                <tr ng-repeat="person in persons" ng-cloak>
+                <tr ng-repeat="person in persons" ng-cloak 
+                    ng-style="{ 
+                        'background-color' : $index == selectedIndex ? '#c9ddfc' : ''
+                    }"
+                    ng-click="selectPerson($index)">
                     <td>{{ $index +1 }}</td>
                     <td>{{ person.name }}</td>
                     <td>{{ person.email }}</td>

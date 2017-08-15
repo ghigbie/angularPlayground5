@@ -3,6 +3,13 @@
 (function(){
     
     var CodeCraftCtrl = function($scope){
+    	
+    	$scope.selectedIndex = null;
+    	
+    	$scope.selectPerson = function(index){
+    		$scope.selectedIndex = index;
+    	};
+    	
         $scope.persons = [
 		{
 			"name": "Gregory Huffman",
@@ -907,7 +914,7 @@
 	];
     };
     
-    CodeCraftCtrl.inject = ['$scope'];
+    CodeCraftCtrl.inject = ['$scope']; 
     
     angular.module('codecraft')
         .controller('CodeCraftCtrl', CodeCraftCtrl);
