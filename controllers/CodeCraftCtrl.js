@@ -5,6 +5,7 @@
     var CodeCraftCtrl = function($scope){
     	$scope.selectedPerson = null;
     	$scope.selectedIndex = null;
+    	$scope.search = {};
     	
     	$scope.selectPerson = function(person, index){
     		$scope.selectedPerson = person;
