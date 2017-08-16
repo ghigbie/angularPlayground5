@@ -53,7 +53,7 @@
                             <th>Email</th>
                             <th>Birthdate</th>
                    
-                            <tr ng-repeat="person in persons" ng-cloak 
+                            <tr ng-repeat="person in persons | filter: search" ng-cloak 
                                 ng-style="{ 
                                     'background-color' : $index == selectedIndex ? '#c9ddfc' : ''
                                 }"
