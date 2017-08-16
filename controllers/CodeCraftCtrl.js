@@ -5,11 +5,18 @@
     var CodeCraftCtrl = function($scope){
     	$scope.selectedPerson = null;
     	$scope.selectedIndex = null;
-    	$scope.search = {};
+    	$scope.search = "";
     	
     	$scope.selectPerson = function(person, index){
     		$scope.selectedPerson = person;
     		$scope.selectedIndex = index;
+    	};
+    	
+    	$scope.sensitiveSearch = function(person){
+    		if($scope.search){
+    			return person.name.indexOf($scope.search) == 0 || person.email.indexOf($scope.search) == 0;
+    		}
+    		return true;
     	};
     	
         $scope.persons = [
