@@ -25,18 +25,18 @@
                             <input type="text"
                                    class="form-control"
                                    id="name"
-                                   ng-model="search.name"
+                                   ng-model="search.$" 
                                    placeholder="Search name..."
-                                   />
+                                   /> <!-- This (search.$) allows you to search on every single attribute on the search object -->
                         </div>
-                        <div class="form-group">
-                            <input type="text"
-                                   class="form-control"
-                                   id="email"
-                                   ng-model="search.email"
-                                   placeholder="Search email..."
-                                   />
-                        </div>
+                        <!--<div class="form-group">-->
+                        <!--    <input type="text"-->
+                        <!--           class="form-control"-->
+                        <!--           id="email"-->
+                        <!--           ng-model="search.email"-->
+                        <!--           placeholder="Search email..."-->
+                        <!--           />-->
+                        <!--</div>-->
                     </form>
                     
                 </div>
