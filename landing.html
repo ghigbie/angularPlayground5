@@ -32,7 +32,7 @@
                         <div class="form-group">
                             <input type="text"
                                    class="form-control"
-                                   id="name"
+                                   id="email"
                                    ng-model="search.email"
                                    placeholder="Search email..."
                                    />
@@ -40,6 +40,8 @@
                     </form>
                     
                 </div>
+                
+                <pre> {{search | json}} </pre>
                 
             </div>
             <div class="row">
