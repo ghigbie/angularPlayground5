@@ -4,7 +4,6 @@
     
     var CodeCraftCtrl = function($scope){
     	$scope.selectedPerson = null;
-    	$scope.selectedIndex = null;
     	$scope.search = "";
     	$scope.order = ""; //initial value to sort by. This can be set to any of the ng-order options on the landing page
     	
