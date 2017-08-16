@@ -6,6 +6,7 @@
     	$scope.selectedPerson = null;
     	$scope.selectedIndex = null;
     	$scope.search = "";
+    	$scope.order = "name";
     	
     	$scope.selectPerson = function(person, index){
     		$scope.selectedPerson = person;
@@ -14,7 +15,8 @@
     	
     	$scope.sensitiveSearch = function(person){
     		if($scope.search){
-    			return person.name.indexOf($scope.search) == 0 || person.email.indexOf($scope.search) == 0;
+    			return person.name.indexOf($scope.search) == 0 || //if your search does not match characters, then it will return -1
+    				   person.email.indexOf($scope.search) == 0;
     		}
     		return true;
     	};

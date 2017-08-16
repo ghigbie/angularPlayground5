@@ -18,7 +18,7 @@
         <div class="container main-content" ng-controller="CodeCraftCtrl">
             
             <div class="row">
-                <div class="col-md-12">
+                <div>
                     <form class="form-inline well well-sm">
                         <span class="glyphicon glyphicon-search"></span>
                         <div class="form-group">
@@ -29,10 +29,18 @@
                                    placeholder="Search name..."
                                    /> <!-- search.$ allows you to search on every single attribute on the search object -->
                         </div>
+                        
+                        <span class="glyphicon glyphicon-sort-by-attributes"></span>
+                        <div class="form-group">
+                            <select class="form-control" ng-model="order">
+                                <option value="name">Name (ASC)</option>
+                                <option value="-name">Name (DEC)</option> <!-- The minus in front of an element will sort in revers -->
+                                <option value="email">Email (ASC)</option>
+                                <option vaue="-email">Email (DEC)</option> <!-- The minus in front of an element will sort in revers -->
+                            </select>
+                        </div>
                     </form>
                 </div>
-                
-                
             </div>
             <div class="row">
                 <div class="col-md-8">
@@ -43,7 +51,8 @@
                             <th>Email</th>
                             <th>Birthdate</th>
                    
-                            <tr ng-repeat="person in persons | filter: sensitiveSearch()" ng-cloak 
+                            <tr ng-repeat="person in persons | filter: sensitiveSearch | orderBy : order " 
+                                ng-cloak 
                                 ng-style="{
                                     'background-color' : $index == selectedIndex ? '#c9ddfc' : ''
                                 }"
