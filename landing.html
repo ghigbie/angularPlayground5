@@ -26,7 +26,7 @@
                                    class="form-control"
                                    id="name"
                                    ng-model="search" 
-                                   placeholder="Search name..."
+                                   placeholder="Search name or email..."
                                    /> <!-- search.$ allows you to search on every single attribute on the search object -->
                         </div>
                         
@@ -47,8 +47,14 @@
                     <div>
                         <table class="table table-bordered">
                             <th>#</th>
-                            <th>Name</th>
-                            <th>Email</th>
+                            <th>Name
+                                <span ng-click="order = 'name'" class="glyphicon glyphicon-menu-up"></span>
+                                <span ng-click="order = '-name'" class="glyphicon glyphicon-menu-down"></span>
+                            </th>
+                            <th>Email
+                                <span ng-click="order = 'email'" class="glyphicon glyphicon-menu-up"></span>
+                                <span ng-click="order = '-email'" class="glyphicon glyphicon-menu-down"></span>
+                            </th>
                             <th>Birthdate</th>
                    
                             <tr ng-repeat="person in persons | filter: sensitiveSearch | orderBy : order " 

@@ -6,7 +6,7 @@
     	$scope.selectedPerson = null;
     	$scope.selectedIndex = null;
     	$scope.search = "";
-    	$scope.order = "name";
+    	$scope.order = ""; //initial value to sort by. This can be set to any of the ng-order options on the landing page
     	
     	$scope.selectPerson = function(person, index){
     		$scope.selectedPerson = person;
